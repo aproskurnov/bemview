@@ -1,0 +1,24 @@
+{
+  "name": "aproskurnov/bemview",
+  "description": "Laravael 5 view for bem-server",
+  "keywords": ["laravel", "laravel5", "bem", "bem-server"],
+  "homepage": "https://github.com/aproskurnov/bemview",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aleksey Proskurnov",
+      "email": "proskurn@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "guzzlehttp/guzzle":"dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "AProskurnov\\Bem\\": "src/"
+    }
+  }
+
+}
