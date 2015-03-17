@@ -1,4 +1,4 @@
-<?php namespace AProskurnov\Bem;
+<?php namespace Aproskurnov\Bem;
 /**
  * file Bem.php.
  * created: 17.03.15
