@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AProskurnov\\Bem\\": "src/"
+      "Aproskurnov\\Bem\\": "src/"
     }
   },
   "minimum-stability": "dev"
