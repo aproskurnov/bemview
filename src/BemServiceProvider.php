@@ -30,8 +30,8 @@ class BemServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->publishes([
-            __DIR__.'config/bem.php' => config_path('bem.php'),
-        ]);
+            __DIR__.'config/bem.php' => config_path('bem.php')
+        ], 'config');
     }
 
 }
