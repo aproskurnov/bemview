@@ -16,15 +16,15 @@ Next, update Composer from the Terminal:
 Once this operation completes, the final step is to add the service provider.
 Open `app/config/app.php`, and add a new item to the providers array.
 
-  `'AProskurnov\Bem\SlugServiceProvider',`
+  `'AProskurnov\Bem\BemServiceProvider',`
 
 And add a new item to the aliases array.
 
-  `'Bem' => 'AProskurnov\Bem\BemFacade',`
+  'Bem' => 'AProskurnov\Bem\BemFacade',
 
 If you want set own port and host, execute command
 
-    `php artisan vendor:publish --provider="BemServiceProvider`
+    `php artisan vendor:publish --provider="BemServiceProvider"`
 
 Usage
 -------
