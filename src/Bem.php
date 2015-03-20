@@ -6,6 +6,7 @@
  * @copyright Copyright (c) 2015, Aleksey Proskurnov
  */
 
+use GuzzleHttp\Url;
 use Illuminate\Support\Facades\Config as Config;
 use GuzzleHttp\Client as Client;
 
@@ -35,12 +36,19 @@ class Bem
             $this->_port = $port;
         }
     }
-    public function render( $currentPage, $params )
+    public function render( $currentPage, $params = [], $bundle = '' )
     {
         $client = new Client();
-        $url = 'http://' . $this->_host . ':' . $this->_port . '/' . $currentPage;
+        $url = new Url('http', $this->_host, null, null, $this->_port, $currentPage);
 
-        $response = $client->post($url, ['body'=>$params]);
-        return $response->json();
+        if (!empty($bundle)){
+            $params['bundle'] = $bundle;
+        }
+
+        $body = ['data'=>$params];
+        $request = $client->createRequest('POST', $url, ['json' => $body]);
+
+        $response = $client->send($request);
+        return $response->getBody()->getContents();
     }
 }
