@@ -28,4 +28,4 @@ If you want set own port and host, execute command
 
 Usage
 -------
-Call of the method: `Bem::render($page, $params)`
+Call of the method: `Bem::render($page, $params, $bundle)`
